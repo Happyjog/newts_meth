@@ -13,10 +13,17 @@ def polyn_maker(d):
         polyn.append(d-i)
     polyn.append(0)
     return  polyn
+def polyn_solver(x, coeff, power):
+    value;
+    for i in range(coeff):
+        value +=  coeff[i] * (x ** power[i])
+    return value
 
 print("Your polynomial is: ")
-for i in range(degree + 1):
+for i in range(degree):
     print(coef_list[i], "x^", polyn_maker(degree)[i],  "+", end = " ")
+    if(degree-i == 1):
+        print(coef_list[i])
 
 
 
@@ -49,4 +56,3 @@ else:
 
 
 x_choice = input()
-
